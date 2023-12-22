@@ -1,5 +1,6 @@
 import 'package:erecycle/core/const/assetpath.dart';
 import 'package:erecycle/core/routes/routes.dart';
+import 'package:erecycle/utils/trashbox.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -102,7 +103,7 @@ class SortTrash extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 18,
-                                color: Colors.white),
+                                color: Colors.black),
                           ),
                         ),
                       ),
@@ -111,6 +112,49 @@ class SortTrash extends StatelessWidget {
                 ),
               ]),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    TrashContainer(
+                      height: 272,
+                      imagePath: AssetsPath.plasticbottle,
+                      title: "Plastic Bottle",
+                      description: "1.750 Point/Kg",
+                      onTap: () {
+                        Navigator.pushNamed(context, Routes.trasdescription);
+                      },
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TrashContainer(
+                        height: 180,
+                        imagePath: AssetsPath.paper,
+                        title: "Paper",
+                        description: "600 Point/Kg")
+                  ],
+                ),
+                Column(
+                  children: [
+                    TrashContainer(
+                        height: 180,
+                        imagePath: AssetsPath.logam,
+                        title: "Logam",
+                        description: "2.000 Point/Kg"),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TrashContainer(
+                        height: 272,
+                        imagePath: AssetsPath.skincare,
+                        title: "SkinCare",
+                        description: "4.000 Point/Kg")
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),

@@ -22,7 +22,19 @@ class AssetsPath {
   static const String motor = '${_imagePath}motor.png';
   static const String truck = '${_imagePath}truck.png';
 
+//for trash container
+static const String plasticbottle = '${_imagePath}plasticbottle.png';
+  static const String logam = '${_imagePath}logam.png';
+static const String paper = '${_imagePath}paper.png';
+  static const String skincare = '${_imagePath}skincare.png';
+  //trasdescription
+  static const String trasdetail = '${_imagePath}plasticbotledetail.png';
 
+
+//topbar
+  static const String topbar = '${_imagePath}blacktopbar.png';
+//dollar
+  static const String dollarSvg = '${_iconPath}dollar.svg';
 
 
 
